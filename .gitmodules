@@ -6,4 +6,4 @@
 	url = https://github.com/telepathic-elements/telepathic-element.git
 [submodule "telepathic-elements/telepathic-loader"]
 	path = telepathic-elements/telepathic-loader
-	url = https://telepathic-elements/telepathic-loader.git
+	url = https://github.com/telepathic-elements/telepathic-loader.git
