@@ -1,0 +1,17 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#deposit-info-modal{
+    animation: fadein 1s;
+}
+
+#qr-element{
+    animation: fadein 3s;
+}
+
+.card-header p{
+    color: black;
+    font-weight: bold;
+}

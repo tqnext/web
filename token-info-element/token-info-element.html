@@ -1,0 +1,48 @@
+<link href="assets/css/material-kit.css" rel="stylesheet" />
+<link href="token-info-element/token-info-element.css" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet">
+<div class="card card-pricing"> 
+    <div class="card-header">
+        <div class="row">
+            <div class="col-sm-4 card-icon">
+                <div class="form-group">
+                    <label for="token-selector" class="control-label">${status}</label>
+                    <select id="token-selector" class="form-control selectpicker"></select>
+                </div>
+                <a href=${home_page} target="_blank"><img src="${icon}"></a>
+            </div>
+            <div class="col-sm-8">
+                <h4 class="card-title">Symbol: ${symbol}</h4>
+                <p class="card-subtitle form-group">
+                    Minimum Deposit: ${min_d}<br>
+                    Maximum Deposit: ${max_d}<br>
+                    Maximum Withdawal: ${max_w}<br>
+                    Network: ${network}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        
+        <form class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-cash"></i>
+                    </span>
+                </div>
+                <input id="user-amount" type="number" class="form-control" min=${min_d} max=${max_d}><br>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-group"></i>
+                    </span>
+                </div>
+                <input id="user-address" type="text" class="form-control">
+            </div>
+        </form>
+    </div>
+</div>
+
+

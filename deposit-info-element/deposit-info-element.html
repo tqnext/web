@@ -1,0 +1,28 @@
+<link href="assets/css/material-kit.css" rel="stylesheet" />
+<link href="assets/css/main.css" rel="stylesheet">
+<link href="deposit-info-element/deposit-info-element.css" rel="stylesheet">
+<div id="deposit-info-modal">
+    <div class="card card-pricing">
+        <div class="card-header card-header-icon">
+                <div class="card-icon">
+                    <button type="button" class="close" aria-label="Close" id="close_btn">
+                        <span aria-hidden="true"><h1>&times;</h1></span>
+                    </button>
+                </div> 
+                <p>Deposit exactly ${deposit_amount} ${inToken} to ${deposit_address} within ${expires} minutes to receive ${withdrawal_amount} ${outToken}</p>
+        </div>
+        <div class="card-body">
+            <p>Tap the QR code to copy the deposit address</p>
+            <qr-code-element id="qr-element" qrdata=${deposit_address} data-clipboard-target="#addr-field"></qr-code-element>
+            <form class="form-group">
+                <div class="input-group">
+                    <input id="addr-field" class="form-control" disabled value=${deposit_address}></input>
+                </div>
+            </form>
+        </div>
+
+        <div class="card-footer center">
+            <progress id="progress-area" max="100">${status_msg}</progress>
+        </div>
+    </div>
+</div>

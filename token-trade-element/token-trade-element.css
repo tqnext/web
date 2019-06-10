@@ -1,0 +1,12 @@
+token-info-element{
+    animation: fadein 3s;
+}
+
+deposit-info-element{
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
