@@ -1,30 +1,12 @@
-/**
- * Welcome to your Workbox-powered service worker!
- *
- * You'll need to register this file in your web app and you should
- * disable HTTP caching for this file too.
- * See https://goo.gl/nhQhGp
- *
- * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox build configuration
- * and re-run your build process.
- * See https://goo.gl/2aRDsh
- */
-
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
-
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
-
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
-self.__precacheManifest = [
+try{
+    importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+    console.log(`Yay! Workbox is loaded 🎉`);
+}catch(err){
+    console.error(err);
+    console.log(`Boo! Workbox didn't load 😬`);
+}
+  
+workbox.precaching.precacheAndRoute([
   {
     "url": "assets/css/font-awesome.min.css",
     "revision": "269550530cc127b6aa5a35925a7de6ce"
@@ -2931,7 +2913,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/app.js",
-    "revision": "68692d8470d2ea6dd0ee1d91d2763567"
+    "revision": "eda72dc04eb1eb5ee7133c55d36c7f76"
   },
   {
     "url": "assets/js/clipboard.min.js",
@@ -2987,7 +2969,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f614d345efe4a8b015f9406991be45f1"
+    "revision": "2c9f243dc8283961bf5aafc65b91516e"
   },
   {
     "url": "manifest.json",
@@ -3002,7 +2984,7 @@ self.__precacheManifest = [
     "revision": "3024b16151ec14d83fc3380a6813d228"
   },
   {
-    "url": "sw.old.js",
+    "url": "sw-template.js",
     "revision": "e6df84dc41a1b6d8f1429e4363c6a18a"
   },
   {
@@ -3031,7 +3013,7 @@ self.__precacheManifest = [
   },
   {
     "url": "token-info-element/token-info-element.html",
-    "revision": "f65e44dd892a5a3096072f779536c703"
+    "revision": "b23b5bb65defa7f75db1c41baffe17a4"
   },
   {
     "url": "token-info-element/token-info-element.js",
@@ -3051,7 +3033,6 @@ self.__precacheManifest = [
   },
   {
     "url": "workbox-config.js",
-    "revision": "faf30f5a1336eae932a0f36b5ae014e7"
+    "revision": "7ab435fdf716506a7fe6dd31bca9a80e"
   }
-].concat(self.__precacheManifest || []);
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+]);
