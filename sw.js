@@ -3017,7 +3017,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "token-info-element/token-info-element.js",
-    "revision": "62f8bb66eb7b9d9d972f43888b000c2b"
+    "revision": "9107d6d3ba5d8968b8f1483ac3cc8b8e"
   },
   {
     "url": "token-trade-element/token-trade-element.css",

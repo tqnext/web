@@ -60,8 +60,31 @@ export default class TokenInfoElement extends TelepathicElement{
 
     async onNewTokens(){
         this.token_selector.innerHTML = "";
-        for(let token of this.tokens){
-            let opt = document.createElement("option");
+        let opt = document.createElement("option");
+        opt.value = "BTC";
+        opt.innerHTML = "Bitcoin";
+        this.token_selector.appendChild(opt);
+        opt = document.createElement("option");
+        opt.value = "ETH";
+        opt.innerHTML = "Ethereum";
+        this.token_selector.appendChild(opt);
+        opt = document.createElement("option");
+        opt.value = "LTC";
+        opt.innerHTML = "Litecoin";
+        this.token_selector.appendChild(opt);
+        opt = document.createElement("option");
+        opt.value = "XMR";
+        opt.innerHTML = "Monero";
+        this.token_selector.appendChild(opt);
+        
+        let tokens = this.tokens;
+        tokens.sort((a,b)=>{
+            return a.symbol > b.symbol ? 1 : -1;
+        });
+        console.debug("tokens sorted: ",tokens);
+        
+        for(let token of tokens){
+            opt = document.createElement("option");
             opt.value = token.symbol;
             opt.innerHTML = token.name;
             this.token_selector.appendChild(opt);
